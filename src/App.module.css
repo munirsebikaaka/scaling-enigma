@@ -1,0 +1,122 @@
+body {
+  background-color: #c5e4e7;
+}
+
+.mainApp {
+  width: 500px;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 15px;
+  gap: 30px;
+}
+
+.amounts {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.pal {
+  color: #f8fdfd;
+  font-size: 0.8rem;
+}
+.tip {
+  color: #2cbeab;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.amountCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 65px;
+  background-color: #00474b;
+  width: 100%;
+  border-radius: 11px;
+  padding: 20px 0;
+}
+.amountCell button {
+  background-color: #9fe8df;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  width: 80%;
+}
+.palAmount {
+  display: flex;
+  flex-direction: column;
+  color: #abd9dc;
+}
+.controlBtns {
+  display: flex;
+  gap: 10px;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 8px 18px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  background-color: #00464b;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btn2 {
+  display: inline-block;
+  border: none;
+  padding: 8px 24.5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  background-color: #f2f8fb;
+  color: #0f4e4d;
+  border: 1px solid #98c9c6;
+  cursor: pointer;
+}
+.controlBtns button:hover {
+  background-color: #9de8df;
+  color: #00464b;
+  transition: all 0.5s;
+  text-align: right;
+}
+
+.inputs {
+  color: #174144;
+  border: 1px solid #87bdb6;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px 0;
+  text-align: end;
+  border-radius: 5px;
+}
+.people {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: -10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0 2px;
+}
+.bill,
+.billStip {
+  font-size: 1rem;
+  padding-left: 2px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+.billStip {
+  margin-bottom: 3px;
+}
+.error {
+  color: #e6cabf;
+}
+.error2 {
+  border: 1px solid #e6cabf;
+}
