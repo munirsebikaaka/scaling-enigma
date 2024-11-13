@@ -119,4 +119,12 @@ body {
 }
 .error2 {
   border: 1px solid #e6cabf;
+  color: #174144;
+
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px 0;
+  text-align: end;
+  border-radius: 5px;
 }

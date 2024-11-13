@@ -13,16 +13,16 @@ function App() {
     if (tipP && bill && numP) {
       const totalTip = bill * (tipP / 100);
       const tipPerPerson = totalTip / numP;
-      setTip(tipPerPerson);
+      setTip(tipPerPerson.toFixed(2));
       const billsALL = bill / numP;
       const billPerPerson = billsALL + tipPerPerson;
-      setTotalA(billPerPerson);
+      setTotalA(billPerPerson.toFixed(2));
     } else if (numP <= 0) {
       setErorr(`Can't be zero`);
     } else if (numP > 0) {
       setErorr("");
     }
-    if (numP > 0) setEr(true);
+    if (numP <= 0) setEr(true);
   };
 
   const resetApp = () => {
@@ -32,6 +32,7 @@ function App() {
     setBill("");
     setTotalA("0.00");
     setTip("0.00");
+    setEr(false);
   };
 
   return (
@@ -77,8 +78,7 @@ function App() {
             <p className={styles.error}>{error}</p>
           </div>
           <input
-            className={er ? styles.error2 : styles.inputs}
-            // {!er ? "error2" : ""}
+            className={!er ? styles.inputs : styles.error2}
             type="number"
             value={numP}
             onChange={(e) => setNumP(e.target.value)}
