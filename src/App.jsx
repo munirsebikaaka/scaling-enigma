@@ -105,5 +105,19 @@ function App() {
     </div>
   );
 }
+// import { BrowserRouter, Routes, Route } from "./react-router-dom";
+// import Intro from "./router/intro";
+// import Sec1 from "./router/sec1";
+// import Sec2 from "./router/sec2";
+// import Sec3 from "./router/sec3";
+
+// function App() {
+//   <BrowserRouter>
+//     <Routes>
+//       <Route path="intro" element={Intro} />
+//     </Routes>
+//   </BrowserRouter>;
+//   return <div>codesmannresgdsfzf</div>;
+// }
 
 export default App;
