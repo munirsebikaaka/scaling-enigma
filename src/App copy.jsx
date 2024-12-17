@@ -5,39 +5,39 @@ function App() {
   const [numP, setNumP] = useState("");
   const [bill, setBill] = useState("");
   const [error, setErorr] = useState("");
-  let [tip, setTip] = useState(+"0.00");
-  let [totalA, setTotalA] = useState(+"0.00");
-  const [tipRange, setTipRange] = useState(0);
+  const [tip, setTip] = useState("0.00");
+  const [totalA, setTotalA] = useState("0.00");
   const [er, setEr] = useState(false);
-  const [money, setMoney] = useState("");
 
-  const getTip = () => {
-    const totalTip = bill * (tipRange / 100);
-    const personTip = totalTip / numP;
-    return personTip;
+  const getTip = (tipP) => {
+    if (tipP && bill && numP) {
+      const totalTip = bill * (tipP / 100);
+      const tipPerPerson = totalTip / numP;
+      setTip(tipPerPerson.toFixed(2));
+      const billsALL = bill / numP;
+      const billPerPerson = billsALL + tipPerPerson;
+      setTotalA(billPerPerson.toFixed(2));
+    } else if (numP <= 0) {
+      setErorr(`Can't be zero`);
+    } else if (numP > 0) {
+      setErorr("");
+    }
+    if (numP <= 0) setEr(true);
   };
-  if (numP) tip = getTip();
-
-  const getTatol = () => {
-    const cashPerPerson = bill / numP;
-    const totalAmount = cashPerPerson + tip;
-    return totalAmount;
-  };
-  if (numP) totalA = getTatol();
-  if (money > 0 && !tip) totalA + money;
 
   const resetApp = () => {
+    setBill(0);
+    setErorr("");
     setNumP("");
     setBill("");
-    setTip(+"0.00");
-    setTotalA(+"0.00");
-    setMoney("");
+    setTotalA("0.00");
+    setTip("0.00");
+    setEr(false);
   };
+
   return (
     <div className={styles.mainApp}>
-      <div className={styles.select}>
-        {/* <button onClick={getTip}>click</button> */}
-
+      <div>
         <div>
           <p className={styles.bill}>Bill</p>
           <input
@@ -51,30 +51,24 @@ function App() {
           <p className={styles.billStip}>Select Tip %</p>
           <>
             <div className={styles.controlBtns}>
-              <button className={styles.btn} onClick={() => setTipRange(5)}>
+              <button className={styles.btn} onClick={() => getTip(5)}>
                 05%
               </button>
-              <button className={styles.btn} onClick={() => setTipRange(10)}>
+              <button className={styles.btn} onClick={() => getTip(10)}>
                 10%
               </button>
-              <button className={styles.btn} onClick={() => setTipRange(15)}>
+              <button className={styles.btn} onClick={() => getTip(15)}>
                 15%
               </button>
             </div>
             <div className={styles.controlBtns}>
-              <button className={styles.btn} onClick={() => setTipRange(25)}>
+              <button className={styles.btn} onClick={() => getTip(25)}>
                 25%
               </button>
-              <button className={styles.btn} onClick={() => setTipRange(50)}>
+              <button className={styles.btn} onClick={() => getTip(50)}>
                 50%
               </button>
-              <input
-                className={styles.btn2}
-                type="number"
-                placeholder="40"
-                value={money}
-                onChange={(e) => setMoney(e.target.value)}
-              />
+              <button className={styles.btn2}>40</button>
             </div>
           </>
         </div>
@@ -92,21 +86,18 @@ function App() {
         </div>
       </div>
       <div className={styles.amountCell}>
-        <div className={styles.aboutTotal}>
-          <div>
+        <div>
+          <div className={styles.amounts}>
             <p className={styles.palAmount}>
               Tip Amount <span>/person</span>
             </p>
+            <p className={styles.tip}> ${tip}</p>
+          </div>
+          <div className={styles.amounts}>
             <p className={styles.palAmount}>
               Total Amount <span>/person</span>
             </p>
-          </div>
-          <div>
-            <p className={styles.tip}> ${tip ? tip.toFixed(1) : "0.00"}</p>
-            <p className={styles.tip}>
-              {" "}
-              ${totalA ? totalA.toFixed(1) : "0.00"}
-            </p>
+            <p className={styles.tip}> ${totalA}</p>
           </div>
         </div>
         <button onClick={resetApp}>reset</button>

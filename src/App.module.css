@@ -1,10 +1,11 @@
 body {
   background-color: #c5e4e7;
+  font-family: sans-serif;
 }
 
 .mainApp {
-  width: 500px;
-  margin: 100px auto;
+  max-width: 500px;
+  margin: 50px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,6 +20,7 @@ body {
   gap: 50px;
   align-items: center;
 }
+
 .pal {
   color: #f8fdfd;
   font-size: 0.8rem;
@@ -39,7 +41,7 @@ body {
   padding: 20px 0;
 }
 .amountCell button {
-  background-color: #9fe8df;
+  background-color: #69c3b9;
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -47,6 +49,10 @@ body {
   text-transform: uppercase;
   font-size: 0.8rem;
   width: 80%;
+  transition: all 0.5s;
+}
+.amountCell button:hover {
+  background-color: #9fe8df;
 }
 .palAmount {
   display: flex;
@@ -70,13 +76,14 @@ body {
 .btn2 {
   display: inline-block;
   border: none;
-  padding: 8px 24.5px;
   margin-bottom: 10px;
   border-radius: 3px;
   background-color: #f2f8fb;
   color: #0f4e4d;
   border: 1px solid #98c9c6;
-  cursor: pointer;
+  width: 58px;
+  text-align: right;
+  outline: none;
 }
 .controlBtns button:hover {
   background-color: #9de8df;
@@ -127,4 +134,35 @@ body {
   padding: 5px 0;
   text-align: end;
   border-radius: 5px;
+}
+
+.aboutTotal {
+  display: flex;
+  gap: 50px;
+}
+@media (max-width: 400px) {
+  .mainApp {
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .select {
+    width: 80%;
+  }
+
+  .controlBtns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn,
+  .btn2 {
+    margin-bottom: 20px;
+  }
+
+  .aboutTotal {
+    width: 80%;
+    justify-content: space-between;
+  }
 }
