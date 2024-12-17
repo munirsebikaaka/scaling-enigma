@@ -16,16 +16,21 @@ function App() {
     const personTip = totalTip / numP;
     return personTip;
   };
-  if (numP) tip = getTip();
+  if (numP) tip = !money ? getTip() : "";
 
   const getTatol = () => {
     const cashPerPerson = bill / numP;
     const totalAmount = cashPerPerson + tip;
     return totalAmount;
   };
-  if (numP) totalA = getTatol();
-  if (money > 0 && !tip) totalA + money;
+  if (numP) totalA = !money ? getTatol() : "";
 
+  const getMoney = () => {
+    const cashPerPerson = bill / numP;
+    const total = cashPerPerson + money;
+    return total;
+  };
+  if (numP) totalA = !tip ? getMoney() : getTatol();
   const resetApp = () => {
     setNumP("");
     setBill("");
@@ -73,7 +78,7 @@ function App() {
                 type="number"
                 placeholder="40"
                 value={money}
-                onChange={(e) => setMoney(e.target.value)}
+                onChange={(e) => setMoney(+e.target.value)}
               />
             </div>
           </>
