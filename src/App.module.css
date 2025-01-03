@@ -1,16 +1,17 @@
 body {
   background-color: #c5e4e7;
-  font-family: sans-serif;
+  font-family: JetBrains Mono;
 }
 
 .mainApp {
-  max-width: 500px;
-  margin: 50px auto;
-  display: flex;
+  max-width: 600px;
+  margin: 150px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
-  padding: 10px;
+  padding: 25px;
   border-radius: 15px;
   gap: 30px;
 }
@@ -27,7 +28,7 @@ body {
 }
 .tip {
   color: #2cbeab;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 .amountCell {
@@ -58,6 +59,10 @@ body {
   display: flex;
   flex-direction: column;
   color: #abd9dc;
+  font-size: 0.8rem;
+}
+.palAmount .person {
+  margin-bottom: 30px;
 }
 .controlBtns {
   display: flex;
@@ -127,7 +132,6 @@ body {
 .error2 {
   border: 1px solid #e6cabf;
   color: #174144;
-
   outline: none;
   width: 100%;
   font-size: 1rem;
@@ -138,7 +142,18 @@ body {
 
 .aboutTotal {
   display: flex;
+  width: 80%;
+  justify-content: space-between;
   gap: 50px;
+}
+.aboutTotal .tipCell {
+  margin-top: -15px;
+}
+.personCell p {
+  color: #fff;
+}
+.personCell span {
+  color: #2cbeab;
 }
 @media (max-width: 400px) {
   .mainApp {

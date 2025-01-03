@@ -98,20 +98,17 @@ function App() {
       </div>
       <div className={styles.amountCell}>
         <div className={styles.aboutTotal}>
-          <div>
+          <div className={styles.personCell}>
             <p className={styles.palAmount}>
-              Tip Amount <span>/person</span>
+              Tip Amount <span className={styles.person}>/person</span>
             </p>
             <p className={styles.palAmount}>
               Total Amount <span>/person</span>
             </p>
           </div>
-          <div>
+          <div className={styles.tipCell}>
             <p className={styles.tip}> ${tip ? tip.toFixed(1) : "0.00"}</p>
-            <p className={styles.tip}>
-              {" "}
-              ${totalA ? totalA.toFixed(1) : "0.00"}
-            </p>
+            <p className={styles.tip}>${totalA ? totalA.toFixed(1) : "0.00"}</p>
           </div>
         </div>
         <button onClick={resetApp}>reset</button>
