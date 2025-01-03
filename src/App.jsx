@@ -41,9 +41,7 @@ function App() {
   return (
     <div className={styles.mainApp}>
       <div className={styles.select}>
-        {/* <button onClick={getTip}>click</button> */}
-
-        <div>
+        <div className={styles.billsCell}>
           <p className={styles.bill}>Bill</p>
           <input
             className={styles.inputs}
@@ -52,7 +50,7 @@ function App() {
             onChange={(e) => setBill(e.target.value)}
           />
         </div>
-        <div>
+        <div className={styles.tipMainCell}>
           <p className={styles.billStip}>Select Tip %</p>
           <>
             <div className={styles.controlBtns}>
@@ -83,7 +81,7 @@ function App() {
             </div>
           </>
         </div>
-        <div>
+        <div className={styles.numPCell}>
           <div className={styles.people}>
             <p>Number of People</p>
             <p className={styles.error}>{error}</p>

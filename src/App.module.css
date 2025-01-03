@@ -4,7 +4,7 @@ body {
 }
 
 .mainApp {
-  max-width: 600px;
+  max-width: 550px;
   margin: 150px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -16,12 +16,6 @@ body {
   gap: 30px;
 }
 
-.amounts {
-  display: flex;
-  gap: 50px;
-  align-items: center;
-}
-
 .pal {
   color: #f8fdfd;
   font-size: 0.8rem;
@@ -31,11 +25,19 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
 }
+
+.billsCell {
+  /* border: 1px solid red; */
+  /* margin-top: -20px; */
+  /* margin-bottom: 20px; */
+
+  /* padding: 0 0; */
+}
 .amountCell {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 65px;
+  gap: 50px;
   background-color: #00474b;
   width: 100%;
   border-radius: 11px;
@@ -43,10 +45,13 @@ body {
 }
 .amountCell button {
   background-color: #69c3b9;
+  font-family: JetBrains Mono;
+
   cursor: pointer;
   border: none;
   border-radius: 5px;
   padding: 8px 0;
+  margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 0.8rem;
   width: 80%;
@@ -77,6 +82,8 @@ body {
   background-color: #00464b;
   color: #ffffff;
   cursor: pointer;
+  width: 100%;
+  font-family: JetBrains Mono;
 }
 .btn2 {
   display: inline-block;
@@ -86,10 +93,13 @@ body {
   background-color: #f2f8fb;
   color: #0f4e4d;
   border: 1px solid #98c9c6;
-  width: 58px;
+  font-family: JetBrains Mono;
+
+  width: 100%;
   text-align: right;
   outline: none;
 }
+
 .controlBtns button:hover {
   background-color: #9de8df;
   color: #00464b;
@@ -106,6 +116,7 @@ body {
   padding: 5px 0;
   text-align: end;
   border-radius: 5px;
+  font-family: JetBrains Mono;
 }
 .people {
   display: flex;
@@ -118,7 +129,7 @@ body {
 }
 .bill,
 .billStip {
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding-left: 2px;
   margin-bottom: 0px;
   font-weight: 600;
@@ -155,6 +166,23 @@ body {
 .personCell span {
   color: #2cbeab;
 }
+
+.select {
+  display: flex;
+  flex-direction: column;
+  /* gap: 6px; */
+  margin-bottom: 30px;
+}
+
+.numPCell {
+  margin-top: 13px;
+  padding: 0;
+}
+.tipMainCell {
+  /* border: 1px solid red; */
+  margin-top: 18px;
+}
+
 @media (max-width: 400px) {
   .mainApp {
     align-items: center;
