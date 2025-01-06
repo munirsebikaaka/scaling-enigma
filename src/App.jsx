@@ -65,14 +65,14 @@ function App() {
               </button>
             </div>
             <div className={styles.controlBtns}>
-              <button className={styles.btn} onClick={() => setTipRange(25)}>
+              <button className={styles.btn2} onClick={() => setTipRange(25)}>
                 25%
               </button>
-              <button className={styles.btn} onClick={() => setTipRange(50)}>
+              <button className={styles.btn2} onClick={() => setTipRange(50)}>
                 50%
               </button>
               <input
-                className={styles.btn2}
+                className={styles.btn3}
                 type="number"
                 placeholder="40"
                 value={money}

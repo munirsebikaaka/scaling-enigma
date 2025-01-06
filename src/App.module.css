@@ -7,7 +7,7 @@ body {
   max-width: 550px;
   margin: 150px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
@@ -22,22 +22,15 @@ body {
 }
 .tip {
   color: #2cbeab;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
-.billsCell {
-  /* border: 1px solid red; */
-  /* margin-top: -20px; */
-  /* margin-bottom: 20px; */
-
-  /* padding: 0 0; */
-}
 .amountCell {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 75px;
   background-color: #00474b;
   width: 100%;
   border-radius: 11px;
@@ -64,16 +57,17 @@ body {
   display: flex;
   flex-direction: column;
   color: #abd9dc;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 .palAmount .person {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .controlBtns {
   display: flex;
   gap: 10px;
 }
-.btn {
+.btn,
+.btn2 {
   display: inline-block;
   border: none;
   padding: 8px 18px;
@@ -86,6 +80,9 @@ body {
   font-family: JetBrains Mono;
 }
 .btn2 {
+  width: 68%;
+}
+.btn3 {
   display: inline-block;
   border: none;
   margin-bottom: 10px;
@@ -158,7 +155,7 @@ body {
   gap: 50px;
 }
 .aboutTotal .tipCell {
-  margin-top: -15px;
+  /* margin-top: -15px; */
 }
 .personCell p {
   color: #fff;
@@ -166,11 +163,16 @@ body {
 .personCell span {
   color: #2cbeab;
 }
+.personCell {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
 
 .select {
   display: flex;
   flex-direction: column;
-  /* gap: 6px; */
   margin-bottom: 30px;
 }
 
@@ -179,33 +181,63 @@ body {
   padding: 0;
 }
 .tipMainCell {
-  /* border: 1px solid red; */
   margin-top: 18px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 545px) {
   .mainApp {
-    align-items: center;
-    margin: 0 auto;
-    flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
-  .select {
-    width: 80%;
+  .aboutTotal {
+    width: 90%;
   }
-
-  .controlBtns {
-    display: flex;
-    justify-content: space-between;
+  .amountCell button {
+    width: 90%;
   }
-
-  .btn,
+  .personCell {
+    margin-top: 20px;
+  }
   .btn2 {
-    margin-bottom: 20px;
+    width: 65%;
+  }
+}
+@media (max-width: 520px) {
+  .aboutTotal {
+    width: 93%;
+  }
+  .amountCell button {
+    width: 93%;
+  }
+  .tip {
+    font-size: 1.3rem;
+  }
+  .palAmount {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
   }
 
   .aboutTotal {
     width: 80%;
-    justify-content: space-between;
+  }
+  .amountCell button {
+    width: 80%;
+  }
+  .tip {
+    font-size: 1.6rem;
+  }
+  .palAmount {
+    font-size: 0.8rem;
+  }
+  .btn2 {
+    width: 79%;
   }
 }
