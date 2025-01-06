@@ -59,9 +59,7 @@ body {
   color: #abd9dc;
   font-size: 0.6rem;
 }
-.palAmount .person {
-  /* margin-bottom: 30px; */
-}
+
 .controlBtns {
   display: flex;
   gap: 10px;
@@ -154,9 +152,7 @@ body {
   justify-content: space-between;
   gap: 50px;
 }
-.aboutTotal .tipCell {
-  /* margin-top: -15px; */
-}
+
 .personCell p {
   color: #fff;
 }
